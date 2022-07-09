@@ -16,4 +16,14 @@ namespace CRMWebApp.Controllers
             return View(c);
         }
     }
+    public class CustomersController : Controller
+    {
+        // GET: Customers
+        public ActionResult ShowData()
+        {
+            List<customer> c = customerManager.Lodedata();
+            // return this.Json(c, JsonRequestBehavior.AllowGet);
+            return View(c);
+        }
+    }
 }
